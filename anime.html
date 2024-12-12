@@ -1,0 +1,74 @@
+<div class="animation-container">
+    <div class="crane-hook"></div>
+    <div class="tools"></div>
+    <div class="scaffold"></div>
+  </div>
+  
+  <style>
+  .animation-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Crane hook swinging */
+  .crane-hook {
+    width: 20px;
+    height: 50px;
+    background: gray;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    animation: swing 2s infinite ease-in-out;
+  }
+  
+  @keyframes swing {
+    0%, 100% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  /* Tools rotating */
+  .tools {
+    width: 100px;
+    height: 100px;
+    background: url('tools.png') no-repeat;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    animation: rotate-tools 3s linear infinite;
+  }
+  
+  @keyframes rotate-tools {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Scaffold bouncing */
+  .scaffold {
+    width: 150px;
+    height: 50px;
+    background: gray;
+    position: absolute;
+    top: 200px;
+    left: 75px;
+    animation: bounce 1.5s infinite ease;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  </style>
+  
